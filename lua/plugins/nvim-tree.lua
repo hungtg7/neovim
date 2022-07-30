@@ -85,6 +85,7 @@ nvim_tree.setup {
     },
   },
   renderer = {
+    highlight_opened_files = "name",
     indent_markers = {
       enable = false,
       icons = {
@@ -123,7 +124,7 @@ nvim_tree.setup {
   },
   update_focused_file = {
     enable = true,
-    update_cwd = true,
+    update_cwd = false,
     ignore_list = {},
   },
   system_open = {

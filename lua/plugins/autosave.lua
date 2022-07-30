@@ -4,9 +4,9 @@ if not status_ok then
 end
 
 autosave.setup({
-  enabled = false,
+  enabled = true,
   execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
-  events = {"InsertLeave", "TextChanged"},
+  events = {"InsertLeave"},
   conditions = {
     exists = true,
     filename_is_not = {},

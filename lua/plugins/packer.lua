@@ -130,6 +130,32 @@ return packer.startup(function(use)
     as = "catppuccin",
   }
 
+  -- Rust
+  use {
+    "rust-lang/rust.vim",
+    requires = { "sbdchd/neoformat", "mattn/webapi-vim", "simrat39/rust-tools.nvim" },
+    config = function()
+      require("rust-tools").setup(
+        {
+          rust_tools_path = "~/.cargo/bin",
+          rust_tools_path_env = "RUST_TOOLS_PATH",
+          rust_tools_path_env_value = "~/.cargo/bin",
+          rust_tools_path_env_value_default = "~/.cargo/bin",
+          -- autoSetHints = true,
+          -- RustSetInlayHints = true,
+          -- RustHoverActions = true,
+        }
+      )
+    end
+  }
+
+  use {
+    "fatih/vim-go"
+  }
+
+  -- Markdown Preview
+  use {"iamcco/markdown-preview.nvim"}
+
   -- Snippets
   use "L3MON4D3/LuaSnip" -- Lua snippet engine
 
