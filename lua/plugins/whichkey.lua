@@ -129,7 +129,7 @@ local mappings = {
   i = {
     name = "GoToImpl",
     g = {"<cmd>:GoImplements<cr>", "GolangImplement"}
-  }
+  },
 
   h = {
     name = "Hop",
