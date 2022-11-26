@@ -112,8 +112,8 @@ local mappings = {
       "Diff",
     },
     -- legacy
-    -- j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-    -- k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
+    j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
+    k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
     -- l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
     -- p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
     -- r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
@@ -124,6 +124,11 @@ local mappings = {
     --   "Undo Stage Hunk",
     -- },
     -- o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+  },
+
+  i = {
+    name = "GoToImpl",
+    g = {"<cmd>:GoImplements<cr>", "GolangImplement"}
   },
 
   h = {
