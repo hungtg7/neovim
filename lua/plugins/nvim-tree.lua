@@ -75,6 +75,7 @@ nvim_tree.setup {
     side = "left",
     preserve_window_proportions = false,
     number = false,
+    adaptive_size = true,
     relativenumber = false,
     signcolumn = "yes",
     mappings = {
