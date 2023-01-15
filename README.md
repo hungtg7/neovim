@@ -1,6 +1,7 @@
 # Neovim Config
 
-Neovim config using Lua. Heavily inspired by [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch)
+Neovim config using Lua.
+Heavily inspired by my mentor https://github.com/dangngo
 
 ## Prerequisites
 
@@ -23,7 +24,7 @@ mv ~/.config/nvim ~/.config/nvim.backup
 2. Clone this repo to the `${HOME}/.config/nvim` directory:
 
 ```term
-git clone https://github.com/dangngo/neovim-config.git ~/.config/nvim
+git clone https://github.com/hungtg7/neovim.git ~/.config/nvim
 ```
 
 3. Run `nvim` and wait for plugins to be installed
