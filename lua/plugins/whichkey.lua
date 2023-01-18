@@ -83,7 +83,7 @@ local mappings = {
     "Buffers",
   },
   -- ["q"] = { "<cmd>lua require('utils').close_buffer()<cr>", "Close Buffer" },
-  ["q"] = { "<cmd>Bdelete! %d<CR>", "Close Buffer" },
+  ["q"] = { "<cmd>Bdelete <CR>", "Close Buffer" },
   ["w"] = { "<cmd>confirm qall<CR>", "Save & Quit" },
   ["<space>"] = {
     "<cmd>Telescope find_files<cr>",
