@@ -19,7 +19,6 @@ configs.setup {
     "gowork",
     "graphql",
     "hcl",
-    "help",
     "html",
     "http",
     "javascript",
