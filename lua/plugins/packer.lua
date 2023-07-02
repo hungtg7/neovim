@@ -157,7 +157,13 @@ return packer.startup(function(use)
   use {"iamcco/markdown-preview.nvim"}
 
   -- Snippets
-  use "L3MON4D3/LuaSnip" -- Lua snippet engine
+  -- Rust config
+  use 'neovim/nvim-lspconfig'
+  use 'simrat39/rust-tools.nvim'
+
+  -- Debugging
+  use 'nvim-lua/plenary.nvim'
+  use 'mfussenegger/nvim-dap' use "L3MON4D3/LuaSnip" -- Lua snippet engine
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
