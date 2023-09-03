@@ -118,7 +118,6 @@ return packer.startup(function(use)
   --use "nyngwang/NeoZoom.lua" -- Zoom in/out
 
   -- Git
-  use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" } -- Magit for Nvim
   use "lewis6991/gitsigns.nvim"
   use "f-person/git-blame.nvim"
 
@@ -153,12 +152,13 @@ return packer.startup(function(use)
     "fatih/vim-go"
   }
 
+  use {"NeogitOrg/neogit"}
+
   -- Markdown Preview
   use {"iamcco/markdown-preview.nvim"}
 
   -- Snippets
   -- Rust config
-  use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
 
   -- Debugging
