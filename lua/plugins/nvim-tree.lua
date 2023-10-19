@@ -69,12 +69,6 @@ nvim_tree.setup {
     adaptive_size = true,
     relativenumber = false,
     signcolumn = "yes",
-    mappings = {
-      custom_only = false,
-      list = {
-        -- user mappings go here
-      },
-    },
   },
   renderer = {
     highlight_opened_files = "name",
