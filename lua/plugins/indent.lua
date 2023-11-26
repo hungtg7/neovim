@@ -6,7 +6,13 @@ end
 vim.opt.list = true
 
 indent_blankline.setup({
-  char = "│",
+  indent = {
+        char = "▎",
+        tab_char = nil,
+        highlight = "IblIndent",
+        smart_indent_cap = true,
+        priority = 1,
+    },
   use_treesitter = true,
   -- show_end_of_line = true,
   space_char_blankline = " ",

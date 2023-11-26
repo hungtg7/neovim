@@ -10,7 +10,7 @@ return {
           enabled = false
         },
         pylint = {
-          enabled = false
+          enabled = true
         },
         pyflakes = {
           enabled = false

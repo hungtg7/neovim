@@ -7,6 +7,9 @@ if not status_ok then
   return
 end
 
+-- set  to speed up loading instead.
+vim.g.skip_ts_context_commentstring_module = true
+
 configs.setup {
   ensure_installed = { -- one of "all" or a list of languages
     "bash",
@@ -56,7 +59,7 @@ configs.setup {
     disable = { "" }, -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
   },
-  context_commentstring = {
+  ts_context_commentstring = {
     enable = true,
     enable_autocmd = false,
   },

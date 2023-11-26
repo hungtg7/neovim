@@ -111,7 +111,8 @@ return packer.startup(function(use)
 
   -- Misc
   use 'famiu/bufdelete.nvim' -- Buffer delete to go with bufferline
-  use "lukas-reineke/indent-blankline.nvim" -- Show indents
+  use { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} } -- Show indents
+
   use "folke/which-key.nvim" -- Shortcut cheat sheet
   use 'lewis6991/impatient.nvim' -- Improve startup time
   use 'karb94/neoscroll.nvim' -- Smooth scrolling
