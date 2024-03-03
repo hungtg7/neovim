@@ -8,24 +8,25 @@ if not status_ok then
 end
 
 neogit.setup {
-  -- Hides the hints at the top of the status buffer
+    -- Hides the hints at the top of the status buffer
   disable_hint = false,
   -- Disables changing the buffer highlights based on where the cursor is.
   disable_context_highlighting = false,
   -- Disables signs for sections/items/hunks
   disable_signs = false,
-  -- Do not ask to confirm the commit - just do it when the buffer is closed.
-  disable_commit_confirmation = false,
   -- Changes what mode the Commit Editor starts in. `true` will leave nvim in normal mode, `false` will change nvim to
   -- insert mode, and `"auto"` will change nvim to insert mode IF the commit message is empty, otherwise leaving it in
   -- normal mode.
-  disable_insert_on_commit = true,
+  disable_insert_on_commit = "auto",
   -- When enabled, will watch the `.git/` directory for changes and refresh the status buffer in response to filesystem
   -- events.
   filewatcher = {
     interval = 1000,
     enabled = true,
   },
+  -- "ascii"   is the graph the git CLI generates
+  -- "unicode" is the graph like https://github.com/rbong/vim-flog
+  graph_style = "ascii", 
   -- Used to generate URL's for branch popup action "pull request".
   git_services = {
     ["github.com"] = "https://github.com/${owner}/${repository}/compare/${branch_name}?expand=1",
@@ -48,6 +49,12 @@ neogit.setup {
     "NeogitPullPopup--rebase",
     "NeogitCommitPopup--allow-empty",
     "NeogitRevertPopup--no-edit",
+  },
+  -- Configure highlight group features
+  highlight = {
+    italic = true,
+    bold = true,
+    underline = true
   },
   -- Set to false if you want to be responsible for creating _ALL_ keymappings
   use_default_keymaps = true,
@@ -171,6 +178,27 @@ neogit.setup {
     },
   },
   mappings = {
+    commit_editor = {
+      ["q"] = "Close",
+      ["<c-c><c-c>"] = "Submit",
+      ["<c-c><c-k>"] = "Abort",
+    },
+    rebase_editor = {
+      ["p"] = "Pick",
+      ["r"] = "Reword",
+      ["e"] = "Edit",
+      ["s"] = "Squash",
+      ["f"] = "Fixup",
+      ["x"] = "Execute",
+      ["d"] = "Drop",
+      ["b"] = "Break",
+      ["q"] = "Close",
+      ["<cr>"] = "OpenCommit",
+      ["gk"] = "MoveUp",
+      ["gj"] = "MoveDown",
+      ["<c-c><c-c>"] = "Submit",
+      ["<c-c><c-k>"] = "Abort",
+    },
     finder = {
       ["<cr>"] = "Select",
       ["<c-c>"] = "Close",
@@ -215,9 +243,9 @@ neogit.setup {
       ["<c-s>"] = "StageAll",
       ["u"] = "Unstage",
       ["U"] = "UnstageStaged",
-      ["d"] = "DiffAtFile",
       ["$"] = "CommandHistory",
       ["#"] = "Console",
+      ["Y"] = "YankSelected",
       ["<c-r>"] = "RefreshBuffer",
       ["<enter>"] = "GoToFile",
       ["<c-v>"] = "VSplitOpen",

@@ -2,8 +2,8 @@
 -- Colors and themes
 ----------------------------------------------------------
 
--- local colorscheme = "catppuccin"
-local colorscheme = "nightfox"
+local colorscheme = "catppuccin"
+--[[ local colorscheme = "nightfox" ]]
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
